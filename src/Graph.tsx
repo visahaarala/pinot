@@ -1,5 +1,5 @@
 import styles from './Graph.module.scss';
-import { getNoteName, getPivotDispersion } from './Notes';
+import { getNoteName, getPivotDispersion } from './notes';
 
 const HIGHEST_PIVOT_INDEX = 15; // f#1
 
@@ -11,7 +11,10 @@ const Graph = ({ pctg }: { pctg: number }) => {
     ...getPivotDispersion(HIGHEST_PIVOT_INDEX, HIGHEST_PIVOT_INDEX),
   );
 
-  const totalNotes = dispersion.reduce((acc, val) => acc + val, 0);
+  const totalNotes = dispersion.reduce(
+    (acc: number, val: number) => acc + val,
+    0,
+  );
 
   return (
     <div className={styles.graph}>
@@ -24,7 +27,7 @@ const Graph = ({ pctg }: { pctg: number }) => {
         </p>
       </div>
       <div className={styles.bars}>
-        {dispersion.map((numNotes, index) => (
+        {dispersion.map((numNotes: number, index: number) => (
           <div className={styles.bar}>
             <p>{`${getNoteName(index)}: ${numNotes}`}</p>
             <div
