@@ -1,0 +1,37 @@
+.slider {
+  margin: 2rem 2rem;
+  position: relative;
+  height: 0.1rem;
+  border-radius: 0.1rem;
+  background-color: hsl(82, 10%, 50%);
+
+  .ball {
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 1.3rem;
+    height: 2rem;
+    @media (pointer: coarse) {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+
+      width: 0.8rem;
+      height: 1.6rem;
+      border-radius: 0.1rem;
+      background-color: hsl(82, 10%, 70%);
+
+      border: 1px solid #222;
+    }
+  }
+}

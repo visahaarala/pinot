@@ -1,0 +1,41 @@
+:root {
+  // variables
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: hsl(82, 39%, 8%);
+}
+
+body {
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: sans-serif;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: 100%;
+  width: 100vw;
+  max-width: 25rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #ccc;
+  text-align: center;
+  font-weight: lighter;
+  transform: scaleY(0.8);
+  margin: 0.7rem;
+}
